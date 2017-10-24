@@ -1,37 +1,17 @@
 <!DOCTYPE html>
-
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Static Index From GitHub</title>
 
-<title>Stateless HTML example</title>
+<script defer src="app.js"></script>
 
+<h1>Static Index</h1>
 
-<link href="css/style.css?v={{ site.time | date: "%s" }}" rel="stylesheet">
-<script defer src="js/app.js?v={{ site.time | date: "%s" }}"></script>
+<nav>
+  <a href="/">Home</a>
+  <a href="/gallery">gallery</a>
+  <a href="/project1">project1</a>
+  <div class="account-menu">
+    <!-- This will be handled by JavaScript -->
 
-
-
-<header>
-  <nav role="navigation">
-    <a href="index.html" {% if page.site == 'home' %}class="active"{% endif %}>Home</a>
-    <a href="contact.html" {% if page.site == 'contact' %}class="active"{% endif %}>Contact</a>
-    <a href="about.html" {% if page.site == 'about' %}class="active"{% endif %}>About</a>
-  </nav>
-
-  <label><input id="fake-slow-connection" type="checkbox" checked> Fake slow connection</label>
-</header>
-
-
-
-<main>
-
-  {{ content }}
-
-</main>
-
-
-<footer role="contentinfo">
-  Copyright (c) 2014
-  |
-  <a href="https://github.com/enyo/stateless-html-example">See the source</a>
-</footer>
+  </div>
+</nav>
